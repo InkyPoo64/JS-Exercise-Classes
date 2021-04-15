@@ -127,20 +127,21 @@ class Airplane {
           + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
- class Instructor extends Lambdasian{
-  constructor(attrs){
-    super(attrs)
-    this.specialty = attrs.specialty;
-    this.favLanguage = attrs.favLanguage;
-    this.catchPhrase = attrs.catchPhrase;
-  }
-demo(subject){
-  returns `Today we are learning about ${subject}`
-}
-grade(student, subject){
-  return `${student.name} receives a perfect score on ${subject}`;
-}
-}
+          class Instructor {
+          jjjijhjkgbjhclass Instructor extends Lambdasian {
+              constructor(properties) {
+              super(properties);
+                this.specialty = properties.specialty;
+                this.favLanguage = properties.favLanguage;
+                this.catchPhrase = properties.catchPhrase;
+              }
+              demo(subject) {
+                return `Today we are learning about ${subject}`;
+              }
+              grade(student, subject) {
+                return `${student.name} receives a perfect score on ${subject}`;
+              }
+            }
   /*
     TASK 5
       - Write a Student class extending Lambdasian.
@@ -190,20 +191,19 @@ grade(student, subject){
           + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
           + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
   */
- class ProjectManager extends Instructor {
-  constructor(attrs){
-    super(attrs)
-    this.gradClassName = attrs.gradClassName;
-    this.favInstructor = attrs.favInstructor;
-  }
-  standUp(channel){
-   return (`${name} announces to ${channel}, @channel standy times!`)
-  }
-
-  debugsCode(student, subject){
-   return (`${name} debugs ${student.name}'s code on ${subject}`)
-  }
-}
+          class ProjectManager extends Instructor {
+            constructor(properties) {
+              super(properties);
+              this.gradClassName = properties.gradClassName;
+              this.favInstructor = properties.favInstructor;
+            }
+            standUp(channel) {
+              return `${this.name} announces to ${channel}, @${channel} standy times!`;
+            }
+            debugsCode(student, subject) {
+              return `${this.name} debugs ${student.name}'s code on ${subject}`;
+            }
+          }
   /*
     STRETCH PROBLEM (no tests!)
       - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
